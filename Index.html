@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> MUEBLES</title>
+  <style>
+    body {
+      height: 1500px;
+      margin: 0;
+    font-family: Arial, sans-serif;
+   
+    }
+    
+    div.bar {
+      background-color:whitesmoke;
+  display: flex;
+  height: 80px;
+  border-style: solid;
+ border-width: 2px;
+ border-top-color:burlywood;
+ border-left-color: whitesmoke;
+ border-right-color: whitesmoke;
+ border-bottom-color: whitesmoke;
+    }
+
+    nav a {
+      
+      color:rgb(37, 29, 29);
+      text-decoration: underline;
+      margin: 0px 10px;
+      font-size: 16px;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      display: flex;
+    }
+
+    nav li {
+      margin: 0 100px;
+    }
+
+    #section0 {
+      background-image: url(https://maidenhome.com/cdn/shop/files/DESKTOP_HERO_1_1620x.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 750px;
+    }
+    h1.mmm{
+      color: rgb(10, 10, 10);
+      margin-right: 1000px;
+      margin-left: -40px;
+      margin-top: 35px;
+      font-size: 63px;
+      font-family: 'Courier New', Courier,monospace;
+      font-weight: lighter;
+    }
+h3.bbb{
+font-weight: lighter;
+text-decoration: underline;
+margin-left: 15px;
+}
+
+
+    #section1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: black;
+      padding: 20px;
+    }
+
+    h1{
+      color: lightgray;
+      font-size: 30px;
+text-align: center;
+font-family: Arial,sans-serif;
+font-weight: lighter;
+    }
+    h2 {
+      color: lightgray;
+      text-align: center;
+font-size: 20px;
+font-weight: lighter;
+font-weight: 200px;
+margin-left: 20px;
+    }
+
+    h2 {
+      margin-left: 20px;
+    }
+button{
+  color: black;
+  cursor: pointer;
+  text-align: center;
+  margin-left: 440px;
+  margin-top: 5%;
+  font-size: 19px;
+  background-color:lightgrey;
+  border-radius: 15px;
+}
+    img {
+      margin-right: 20px;
+    }
+
+    #section1{
+      background-color:#333;
+    }
+
+#section2{
+  background-color:rgb(205, 170, 117) ;
+}
+#section2>h1{
+  color:#252424;
+  text-align: center;
+  margin-left: 25px;
+  font-weight: lighter;
+  
+  
+  
+}
+
+    .photo-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .photo {
+      position: relative;
+      width: calc(25% - 20px);
+      margin: 10px;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    
+    #section3{
+      background-color: whitesmoke;
+    }
+    .head{
+  color: whitesmoke;
+  text-align: center;
+  padding: 60px;
+  font-weight: bolder;
+  font-size: 38px;
+  background-color:#333;
+}
+ 
+    main {
+      padding: 10px;
+    }
+
+    section {
+      margin-bottom: 20px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .aaa,.ccc{
+color:#333;
+font-weight: bolder;
+font-size: 26px;
+margin-top: -10px;
+}
+.zzz,.ddd{
+  color:#333;
+  font-size: 17px;
+  margin-top: -10px;
+}
+
+.zzz{
+  padding-left: 22px;
+}
+.ddd{
+  padding-left: 25px;
+}
+    .contact-form {
+      max-width: 600px;
+      margin: auto;
+      margin-top: 45px;
+    }
+ .msg{
+  color: #333;
+  font-size: 26px;
+  font-weight: bolder;
+  margin-left: -370px;
+
+}
+    form {
+      display: grid;
+      grid-gap: 10px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+     
+      background-color: #333;
+      color: white;
+      cursor: pointer;
+      
+
+    }
+.loc{
+  color: #333;
+  margin-left: -1100px;
+  font-weight: bolder;
+  font-size:26px ;
+}
+    iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    footer {
+      background-color:#333;
+      color:whitesmoke;
+      text-align: center;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    
+
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const photos = document.querySelectorAll('.photo');
+
+    photos.forEach(photo => {
+      photo.addEventListener('mouseenter', () => {
+        // Bring the hovered photo to the front
+        photo.style.transform = 'scale(1.1)';
+      });
+
+      photo.addEventListener('mouseleave', () => {
+        // Reset the transform on mouse leave
+        photo.style.transform = 'scale(1)';
+      });
+    });
+  });
+
+
+</script>
+
+</head>
+
+<body>
+  
+
+  <header>
+    <!-- Beginning of bar -->
+    <section id="section0">
+      <div class="bar">
+        <div class="flex-container">
+          <nav>
+            <ul>
+              <li><a href="#section0"><h3>HOME</h3></a></li>
+              <li><a href="#section1"><h3>ABOUT US</h3></a></li>
+              <li><a href="#section2"><h3>FURNITURE OPTIONS</h3></a></li>
+              <li><a href="#section3"><h3>CONTACT US</h3></a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- Bar ends here -->
+       
+        <h1 class="mmm"> MUEBLES</h1> 
+       <h3 class="bbb">Better Environment, Better Tomorrow</h3> 
+       
+    </section>
+    
+  </header>
+
+  <section id="section1">
+    <img src="E:\HTML\The Project\interior-design-with-chair-potted-monstera-plant.jpg" width="450" height="500">
+
+    <div>
+      <h1>ABOUT US</h1>
+      <h2>
+        With MUEBLES, feel confident that your furniture doesn't sacrifice your values. 
+        No greenwashing, no chemicals, no sacrificing your values. 
+        Luxury furniture for less – without the stress.
+      </h2>
+
+      <h2>
+        Our Mission:
+        We're setting a new standard for earth-friendly, affordable, and beautiful furniture. Our work is just beginning and we're so glad you're with us.
+        We're making better furniture for you and the planet.
+      </h2>
+      <h2> The concept of “environmentally friendly furniture” or “ecological furniture” may seem very broad, but we could define it as all those pieces of furniture that are composed of natural or recycled materials without any type of additive that alters them and manufactured in the most respectful conditions both for the environment and for people. In addition, this type of furniture, in most cases, is handmade. 
+      </h2>
+   
+   <button type="button"> More Info</button>
+    </div>
+
+   
+  </section>
+
+  <section id="section2" class="photo-grid">
+    <p><h1> MUEBLES is a purveyor of luxury, handcrafted furnishings for the modern home.</h1></p> 
+    <br>
+
+    <!-- Your photo grid goes here -->
+    <!-- Photo 1 -->
+    <div class="photo"><img src="E:\HTML\The Project\StockSnap_0DH6S6OU6Q.jpg " alt="Photo 1"></div>
+    <!-- Photo 2 -->
+    <div class="photo"><img src="E:\HTML\The Project\Sustainable-sofa-floyd.jpg" alt="Photo 2"></div>
+    <!-- Photo 3 -->
+    <div class="photo"><img src="E:\HTML\The Project\StockSnap_9QLIF5KSSQ.jpg" alt="Photo 3"></div>
+    <!-- Photo 4 -->
+    <div class="photo"><img src="E:\HTML\The Project\classic-wooden-chair-by-fiddle-leaf-fig-plant.jpg" alt="Photo 4"></div>
+    <!-- Photo 5 -->
+    <div class="photo"><img src="E:\HTML\The Project\cafe-coffee-shop-interior-simple-concept_53876-41437.jpg" alt="Photo 5"></div>
+    <!-- Photo 6 -->
+    <div class="photo"><img src="E:\HTML\The Project\empty-photo-frames-arrangement-table_23-2149454915.jpg" alt="Photo 6"></div>
+    <!-- Photo 7 -->
+    <div class="photo"><img src="E:\HTML\The Project\sabai-1.jpeg" alt="Photo 10" alt="Photo 7"></div>
+    <!-- Photo 8 -->
+    <div class="photo"><img src="E:\HTML\The Project\modern-composition-creative-living-room-interior-with-elegant-wooden-cupboard-mock-up-painting-stylish-accessories-home-staging-template-copy-space_431307-7102.jpg" alt="Photo 8"></div>
+    <!-- Photo 9 -->
+    <div class="photo"><img src="E:\HTML\The Project\minimalist-interior-design_23-2150870796.jpg" alt="Photo 9"></div>
+    <!-- Photo 10 -->
+    <div class="photo"><img src="E:\HTML\The Project\parachute-ecofriendly-furniture-edited-1.jpeg.jpg"></div>
+    <!-- Photo 11 -->
+    <div class="photo"><img src="E:\HTML\The Project\home-interior-design-arrangement.jpg" alt="photo 11"></div>
+    <!-- Photo 12 -->
+    <div class="photo"><img src="E:\HTML\The Project\master-hyde-chair-7_77dd9398-e604-4975-bfd7-522639a15986_2048x.jpg" alt="Photo 12"></div>
+  </section>
+
+  <section id="section3">
+    <header>
+      <h1 class="head">Contact Us</h1>
+  </header>
+
+    <main>
+      <section class="contact-info">
+        <div>
+            <h2 class="aaa"> Our Office </h2>
+            <p class="zzz">123 Main Street<br>Cityville, Country</p>
+        </div>
+
+        <div>
+          <h2 class="ccc">Contact Information</h2>
+            <p class="ddd">Email: Furniture@gmail.com<br>Phone: + 1(659)241-0535</p>
+        </div>
+
+    </section>
+
+      <section class="contact-form">
+        <h2 class="msg">Send us a Message</h2>
+        <form action="index.php" method="post">
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="Enter your name" required>
+          <label for="email">Your Email:</label>
+          <input type="email" id="email" name="email" placeholder="Enter a valid email address" required>
+          <label for="message">Your Message:</label>
+          <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+          
+          <input type="submit" name="btntest" value="Send Message">
+          
+        </form>
+      </section>
+
+      <section>
+        <h2 class="loc">Our Location</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.908291116971!2d-122.08379268467545!3d37.38605197983934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fbc3b82a7b7a5%3A0xed85c4d6b15a59ac!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1616600110216!5m2!1sen!2sus"
+          allowfullscreen></iframe>
+      </section>
+    </main>
+    <footer>
+      2023 MUEBLES
+    </footer>
+  </section>
+  
+</body>
+
+</html>
